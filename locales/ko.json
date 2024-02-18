@@ -1,0 +1,14 @@
+{
+    "stock": {
+        "watering": {
+            "title": "주식 물타기",
+            "titleInfo": "신규 매수할 주식의 평균가 계산하기",
+            "averagePrice": "최종 평균가",
+            "totalQuantity": "최종 수량",
+            "currentPrice": "현재 평균가",
+            "currentQuantity": "현재 수량",
+            "wateringPrice": "물타기 평균가",
+            "wateringQuantity": "물타기 수량"
+        }
+    }
+}

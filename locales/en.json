@@ -1,0 +1,14 @@
+{
+    "stock": {
+        "watering": {
+            "title": "Stock watering",
+            "titleInfo": "Calculate the average price of a new stock to buy",
+            "averagePrice": "average price",
+            "totalQuantity": "total quantity",
+            "currentPrice": "current price",
+            "currentQuantity": "current quantity",
+            "wateringPrice": "watering price",
+            "wateringQuantity": "watering quantity"
+        }
+    }
+}
