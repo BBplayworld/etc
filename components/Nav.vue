@@ -27,7 +27,7 @@
     </nav>
 </template>
 <script setup>
-const localePath = useLocalePath()
 import { useNavStore } from '@/stores/nav'
+const localePath = useLocalePath()
 const navStore = useNavStore()
 </script>
