@@ -4781,7 +4781,7 @@ fieldset:disabled .btn {
 }
 
 .navbar-nav .dropdown-menu {
-  position: static;
+  position: absolute;
 }
 
 .navbar-text {
@@ -21349,6 +21349,7 @@ fieldset:disabled .btn {
 .dropdown-menu li,
 .dropdown-menu option {
   position: relative;
+  cursor: pointer;
 }
 
 .dropdown.dropdown-subitem:after {
@@ -22608,7 +22609,7 @@ html {
 .navbar-vertical.navbar-expand-xs {
   display: block;
   position: fixed;
-  top: 3.1rem;
+  top: 5.09rem;
   bottom: 0;
   width: 100%;
   max-width: 15.625rem !important;

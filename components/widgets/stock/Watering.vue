@@ -47,13 +47,13 @@
                     <label>{{ $t('stock.watering.currentPrice') }}</label>
                     <div class="input-group">
                         <span class="input-group-text text-body"><i class="fas fa-won-sign" aria-hidden="true"></i></span>
-                        <input type="text" class="form-control" placeholder="" v-model.number="currentPrice">
+                        <input type="text" class="form-control" placeholder="" v-model.number="currentPrice" maxlength="10">
                     </div>
                 </div>
                 <div class="col-6 p-1">
                     <label>{{ $t('stock.watering.currentQuantity') }}</label>
                     <div class="input-group">
-                        <input type="text" class="form-control" placeholder="" v-model.number="currentQuantity">
+                        <input type="text" class="form-control" placeholder="" v-model.number="currentQuantity" maxlength="8">
                     </div>
                 </div>
                 <div class="col-12 pt-2"></div>
@@ -61,13 +61,13 @@
                     <label>{{ $t('stock.watering.wateringPrice') }}</label>
                     <div class="input-group">
                         <span class="input-group-text text-body"><i class="fas fa-won-sign" aria-hidden="true"></i></span>
-                        <input type="text" class="form-control" placeholder="" v-model.number="wateringPrice">
+                        <input type="text" class="form-control" placeholder="" v-model.number="wateringPrice" maxlength="10">
                     </div>
                 </div>
                 <div class="col-6 p-1">
                     <label>{{ $t('stock.watering.wateringQuantity') }}</label>
                     <div class="input-group">
-                        <input type="text" class="form-control" placeholder="" v-model.number="wateringQuantity">
+                        <input type="text" class="form-control" placeholder="" v-model.number="wateringQuantity" maxlength="8">
                     </div>
                 </div>
             </div>
@@ -77,13 +77,16 @@
 <script setup>
 const func = {
     watering() {
-        if (!currentPrice.value || !currentQuantity.value || !wateringPrice.value || !wateringQuantity.value) { return }
+        if (!currentPrice.value || !currentQuantity.value || !wateringPrice.value || !wateringQuantity.value) {
+            changeFlag.value = ''
+            return
+        }
 
         totalQuantity.value = currentQuantity.value + wateringQuantity.value
         averagePrice.value = Math.round(((currentPrice.value * currentQuantity.value) + (wateringPrice.value * wateringQuantity.value)) / totalQuantity.value * 100) / 100
 
         changeFlag.value = Math.round(((averagePrice.value - currentPrice.value) / currentPrice.value) * 100 * 100) / 100
-        Math.sign(changeFlag.value) >= 0 ? changeFlag.value = `+${changeFlag.value}% Increase` : changeFlag.value = `-${changeFlag.value}% Decrease`
+        Math.sign(changeFlag.value) >= 0 ? changeFlag.value = `+${changeFlag.value}% Increase` : changeFlag.value = `${changeFlag.value}% Decrease`
 
         totalQuantity.value = totalQuantity.value.toLocaleString()
         averagePrice.value = averagePrice.value.toLocaleString()

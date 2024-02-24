@@ -9,7 +9,7 @@
             <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
                 <div class="ms-md-auto pe-md-3 d-flex align-items-center">
                 </div>
-                <ul class="navbar-nav  justify-content-end">
+                <ul class="navbar-nav justify-content-start">
                     <li class="nav-item d-xl-none ps-3 d-flex align-items-center">
                         <a href="javascript:;" class="nav-link text-body p-0" id="iconNavbarSidenav"
                             @click="navStore.switchShow()">
@@ -20,6 +20,8 @@
                             </div>
                         </a>
                     </li>
+                </ul>
+                <ul class="navbar-nav justify-content-end">
                     <LocaleNav />
                 </ul>
             </div>
