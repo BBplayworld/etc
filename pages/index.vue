@@ -6,6 +6,14 @@
                 </div>
             </div>
         </div>
-        <Footer />
     </main>
 </template>
+<script setup>
+useSeoMeta({
+    title: 'ETC.gg',
+    ogTitle: 'ETC.gg',
+    description: '잡다구리.It provides miscellaneous functions.',
+    ogDescription: '잡다구리.It provides miscellaneous functions.',
+    ogImage: ''
+})
+</script>

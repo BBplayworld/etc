@@ -10,5 +10,8 @@
             "wateringPrice": "watering price",
             "wateringQuantity": "watering quantity"
         }
+    },
+    "etc": {
+        "contact": "Contact us"
     }
 }

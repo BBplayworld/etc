@@ -1,29 +1,3 @@
-<script setup>
-const func = {
-    watering() {
-        if (!currentPrice.value || !currentQuantity.value || !wateringPrice.value || !wateringQuantity.value) { return }
-
-        totalQuantity.value = currentQuantity.value + wateringQuantity.value
-        averagePrice.value = Math.round(((currentPrice.value * currentQuantity.value) + (wateringPrice.value * wateringQuantity.value)) / totalQuantity.value * 100) / 100
-
-        changeFlag.value = Math.round(((averagePrice.value - currentPrice.value) / currentPrice.value) * 100 * 100) / 100
-        Math.sign(changeFlag.value) >= 0 ? changeFlag.value = `+${changeFlag.value}% Increase` : changeFlag.value = `-${changeFlag.value}% Decrease`
-
-        totalQuantity.value = totalQuantity.value.toLocaleString()
-        averagePrice.value = averagePrice.value.toLocaleString()
-    }
-}
-
-const currentPrice = defineModel('currentPrice', { default: 100, set: func.watering })
-const currentQuantity = defineModel('currentQuantity', { default: 1, set: func.watering })
-const wateringPrice = defineModel('wateringPrice', { default: 100, set: func.watering })
-const wateringQuantity = defineModel('wateringQuantity', { default: 1, set: func.watering })
-const averagePrice = defineModel('averagePrice', { default: 100 })
-const changeFlag = defineModel('changeFlag', { default: '' })
-const totalQuantity = defineModel('totalQuantity', { default: 1 })
-
-</script>
-
 <template>
     <div class="card border-sm-1">
         <div class="card-header pb-0">
@@ -100,3 +74,27 @@ const totalQuantity = defineModel('totalQuantity', { default: 1 })
         </div>
     </div>
 </template>
+<script setup>
+const func = {
+    watering() {
+        if (!currentPrice.value || !currentQuantity.value || !wateringPrice.value || !wateringQuantity.value) { return }
+
+        totalQuantity.value = currentQuantity.value + wateringQuantity.value
+        averagePrice.value = Math.round(((currentPrice.value * currentQuantity.value) + (wateringPrice.value * wateringQuantity.value)) / totalQuantity.value * 100) / 100
+
+        changeFlag.value = Math.round(((averagePrice.value - currentPrice.value) / currentPrice.value) * 100 * 100) / 100
+        Math.sign(changeFlag.value) >= 0 ? changeFlag.value = `+${changeFlag.value}% Increase` : changeFlag.value = `-${changeFlag.value}% Decrease`
+
+        totalQuantity.value = totalQuantity.value.toLocaleString()
+        averagePrice.value = averagePrice.value.toLocaleString()
+    }
+}
+
+const currentPrice = defineModel('currentPrice', { default: 100, set: func.watering })
+const currentQuantity = defineModel('currentQuantity', { default: 1, set: func.watering })
+const wateringPrice = defineModel('wateringPrice', { default: 100, set: func.watering })
+const wateringQuantity = defineModel('wateringQuantity', { default: 1, set: func.watering })
+const averagePrice = defineModel('averagePrice', { default: 100 })
+const changeFlag = defineModel('changeFlag', { default: '' })
+const totalQuantity = defineModel('totalQuantity', { default: 1 })
+</script>

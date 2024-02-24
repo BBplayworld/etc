@@ -10,5 +10,8 @@
             "wateringPrice": "물타기 평균가",
             "wateringQuantity": "물타기 수량"
         }
+    },
+    "etc": {
+        "contact": "문의"
     }
 }

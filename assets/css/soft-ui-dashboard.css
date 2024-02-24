@@ -4128,7 +4128,7 @@ fieldset:disabled .btn {
 
 .dropdown-menu {
   --bs-dropdown-zindex: 1000;
-  --bs-dropdown-min-width: 11rem;
+  --bs-dropdown-min-width: 7rem;
   --bs-dropdown-padding-x: 0;
   --bs-dropdown-padding-y: 0.5rem;
   --bs-dropdown-spacer: 1.625rem;
@@ -21346,7 +21346,8 @@ fieldset:disabled .btn {
   }
 }
 
-.dropdown-menu li {
+.dropdown-menu li,
+.dropdown-menu option {
   position: relative;
 }
 
@@ -22370,7 +22371,6 @@ html {
 }
 
 .navbar {
-  margin-top: 1rem;
   background-color: #FFD600;
   color: white !important;
   box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.16);
@@ -22608,7 +22608,7 @@ html {
 .navbar-vertical.navbar-expand-xs {
   display: block;
   position: fixed;
-  top: 0;
+  top: 3.1rem;
   bottom: 0;
   width: 100%;
   max-width: 15.625rem !important;
@@ -22620,7 +22620,7 @@ html {
 .navbar-vertical.navbar-expand-xs .navbar-collapse {
   display: block;
   overflow: auto;
-  height: calc(100vh - 360px);
+  height: calc(100vh - 260px);
 }
 
 .navbar-vertical.navbar-expand-xs>[class*="container"] {
@@ -22640,7 +22640,7 @@ html {
 }
 
 .navbar-vertical.navbar-expand-xs.fixed-start {
-  left: 0;
+  left: 0.5rem;
 }
 
 .navbar-vertical.navbar-expand-xs.fixed-end {
@@ -23260,7 +23260,7 @@ html {
     padding: 1.5rem;
   }
 
-  .sidenav.fixed-start~.main-content {
+  .sidenav~.main-content {
     margin-left: 17.125rem;
   }
 
