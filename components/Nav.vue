@@ -3,16 +3,14 @@
         <div class="container-fluid py-1 px-3">
             <nav aria-label="breadcrumb">
                 <h4 class="font-weight-bolder mb-0 ms-2">
-                    <NuxtLink :to="localePath('/')">Etc..</NuxtLink>
+                    <NuxtLink :to="localePath('/')">BBetc..</NuxtLink>
                 </h4>
             </nav>
             <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
-                <div class="ms-md-auto pe-md-3 d-flex align-items-center">
-                </div>
-                <ul class="navbar-nav justify-content-start">
+                <ul class="navbar-nav ps-md-2">
                     <li class="nav-item d-xl-none ps-3 d-flex align-items-center">
                         <a href="javascript:;" class="nav-link text-body p-0" id="iconNavbarSidenav"
-                            @click="navStore.switchShow()">
+                            @click="asideStore.switchShow()">
                             <div class="sidenav-toggler-inner">
                                 <i class="sidenav-toggler-line"></i>
                                 <i class="sidenav-toggler-line"></i>
@@ -21,6 +19,8 @@
                         </a>
                     </li>
                 </ul>
+                <div class="ms-md-auto pe-md-3 d-flex align-items-center">
+                </div>
                 <ul class="navbar-nav justify-content-end">
                     <LocaleNav />
                 </ul>
@@ -29,7 +29,7 @@
     </nav>
 </template>
 <script setup>
-import { useNavStore } from '@/stores/nav'
+import { useAsideStore } from '@/stores/aside'
+const asideStore = useAsideStore()
 const localePath = useLocalePath()
-const navStore = useNavStore()
 </script>

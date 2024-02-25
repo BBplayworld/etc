@@ -1,18 +1,28 @@
 <template>
-    <div v-if="isMounted" class="g-sidenav-show" :class="[navStore.show ? 'g-sidenav-pinned' : '']">
+    <div v-if="isMounted" class="g-sidenav-show" :class="[asideStore.show ? 'g-sidenav-pinned' : '']">
         <Nav />
-        <div class="etc">
-            <Aside />
-            <slot />
+        <Aside />
+        <div class="etc" @click="func.asideToggle">
+            <div>
+                <slot />
+            </div>
         </div>
         <Footer />
     </div>
 </template>
 <script setup>
-import { useNavStore } from '@/stores/nav'
-const navStore = useNavStore()
+import { useAsideStore } from '@/stores/aside'
+const asideStore = useAsideStore()
 const isMounted = ref(false)
 onMounted(() => {
     isMounted.value = true
 })
+
+const func = {
+    asideToggle(_t) {
+        if (asideStore.show) {
+            asideStore.switchShow()
+        }
+    }
+}
 </script>
