@@ -47,15 +47,15 @@
                     <label>{{ $t('stock.watering.currentPrice') }}</label>
                     <div class="input-group">
                         <span class="input-group-text text-body"><i class="fas fa-won-sign" aria-hidden="true"></i></span>
-                        <input type="text" class="form-control" placeholder="" v-model.number="currentPrice" maxlength="10"
-                            @click="currentPrice = ''">
+                        <input type="number" pattern="\d*" class="form-control" placeholder="" v-model.number="currentPrice"
+                            maxlength="10" @click="currentPrice = ''">
                     </div>
                 </div>
                 <div class="col-6 p-1">
                     <label>{{ $t('stock.watering.currentQuantity') }}</label>
                     <div class="input-group">
-                        <input type="text" class="form-control" placeholder="" v-model.number="currentQuantity"
-                            maxlength="8" @click="currentQuantity = ''">
+                        <input type="number" pattern="\d*" class="form-control" placeholder=""
+                            v-model.number="currentQuantity" maxlength="8" @click="currentQuantity = ''">
                     </div>
                 </div>
                 <div class="col-12 pt-2"></div>
@@ -63,15 +63,15 @@
                     <label>{{ $t('stock.watering.wateringPrice') }}</label>
                     <div class="input-group">
                         <span class="input-group-text text-body"><i class="fas fa-won-sign" aria-hidden="true"></i></span>
-                        <input type="text" class="form-control" placeholder="" v-model.number="wateringPrice" maxlength="10"
-                            @click="wateringPrice = ''">
+                        <input type="number" pattern="\d*" class="form-control" placeholder=""
+                            v-model.number="wateringPrice" maxlength="10" @click="wateringPrice = ''">
                     </div>
                 </div>
                 <div class="col-6 p-1">
                     <label>{{ $t('stock.watering.wateringQuantity') }}</label>
                     <div class="input-group">
-                        <input type="text" class="form-control" placeholder="" v-model.number="wateringQuantity"
-                            maxlength="8" @click="wateringQuantity = ''">
+                        <input type="number" pattern="\d*" class="form-control" placeholder=""
+                            v-model.number="wateringQuantity" maxlength="8" @click="wateringQuantity = ''">
                     </div>
                 </div>
             </div>
