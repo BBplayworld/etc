@@ -1,8 +1,6 @@
 <template>
     <aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0" id="sidenav-main">
-        <div class="sidenav-header">
-            &nbsp;
-        </div>
+        <div class="pt-6">&nbsp;</div>
         <hr class="horizontal dark mt-0">
         <div class="collapse navbar-collapse  w-auto " id="sidenav-collapse-main">
             <ul class="navbar-nav">

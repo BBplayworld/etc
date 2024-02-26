@@ -22380,6 +22380,7 @@ html {
   background-color: #FFD600;
   color: white !important;
   box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.16);
+  z-index: 1040;
 }
 
 .navbar .navbar-brand {
@@ -22614,7 +22615,7 @@ html {
 .navbar-vertical.navbar-expand-xs {
   display: block;
   position: fixed;
-  top: 5.09rem;
+  top: 0;
   bottom: 0;
   width: 100%;
   max-width: 15.625rem !important;
@@ -23266,7 +23267,7 @@ html {
     padding: 1.5rem;
   }
 
-  .main-content {
+  .main-content, footer {
     margin-left: 17.125rem;
   }
 

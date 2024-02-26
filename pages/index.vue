@@ -9,9 +9,11 @@
     </main>
 </template>
 <script setup>
+import { useBBetcStore } from '@/stores/bbetc'
+const bbetcStore = useBBetcStore()
 useSeoMeta({
-    title: 'ETC.gg',
-    ogTitle: 'ETC.gg',
+    title: bbetcStore.domain,
+    ogTitle: bbetcStore.domain,
     description: '잡다구리.It provides miscellaneous functions.',
     ogDescription: '잡다구리.It provides miscellaneous functions.',
     ogImage: ''

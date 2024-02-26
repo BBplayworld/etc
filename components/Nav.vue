@@ -3,7 +3,7 @@
         <div class="container-fluid py-1 px-3">
             <nav aria-label="breadcrumb">
                 <h4 class="font-weight-bolder mb-0 ms-2">
-                    <NuxtLink :to="localePath('/')">BBetc..</NuxtLink>
+                    <NuxtLink :to="localePath('/')">{{ bbetcStore.company }}..</NuxtLink>
                 </h4>
             </nav>
             <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
@@ -30,6 +30,8 @@
 </template>
 <script setup>
 import { useAsideStore } from '@/stores/aside'
+import { useBBetcStore } from '@/stores/bbetc'
 const asideStore = useAsideStore()
+const bbetcStore = useBBetcStore()
 const localePath = useLocalePath()
 </script>

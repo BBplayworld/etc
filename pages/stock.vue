@@ -10,9 +10,11 @@
     </main>
 </template>
 <script setup>
+import { useBBetcStore } from '@/stores/bbetc'
+const bbetcStore = useBBetcStore()
 useSeoMeta({
-    title: 'ETC.gg',
-    ogTitle: 'ETC.gg',
+    title: bbetcStore.domain,
+    ogTitle: bbetcStore.domain,
     description: '주식 물타기 계산기.Average price calculator through new stock purchase.',
     ogDescription: '주식 물타기 계산기.Average price calculator through new stock purchase.',
     ogImage: ''
