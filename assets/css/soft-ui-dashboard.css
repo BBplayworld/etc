@@ -107,6 +107,7 @@
 body,
 html {
   overflow-x: hidden;
+  min-width: 1024px;
 }
 
 body {
@@ -5399,6 +5400,230 @@ fieldset:disabled .btn {
     border-bottom-left-radius: 0;
   }
 }
+
+
+.badge a {
+  color: #fff
+}
+
+.badge-sm {
+  padding: .45em .775em;
+  font-size: .65em;
+  border-radius: .25rem
+}
+
+.badge-md {
+  padding: .65em 1em
+}
+
+.badge-lg {
+  padding: .85em 1.375em
+}
+
+.badge-inline {
+  margin-right: .625rem
+}
+
+.badge-inline+span {
+  top: 2px;
+  position: relative
+}
+
+.badge-inline+span>a {
+  text-decoration: underline
+}
+
+.badge-default {
+  color: #fff
+}
+
+.bg-secondary {
+  background-color: theme-color("secondary");
+  color: color-yiq(theme-color("secondary"))
+}
+
+.btn .badge:not(:first-child) {
+  margin-left: .5rem
+}
+
+.btn .badge:not(:last-child) {
+  margin-right: .5rem
+}
+
+.badge-primary {
+  color: #a3017e;
+  background-color: #f883dd
+}
+
+.badge-primary[href]:focus,
+.badge-primary[href]:hover {
+  color: color-yiq(#cb0c9f);
+  text-decoration: none;
+  background-color: #910972
+}
+
+.badge-secondary {
+  color: #5974a2;
+  background-color: #e4e8ed
+}
+
+.badge-secondary[href]:focus,
+.badge-secondary[href]:hover {
+  color: color-yiq(#8392ab);
+  text-decoration: none;
+  background-color: #617390
+}
+
+.badge-success {
+  color: #67b108;
+  background-color: #cdf59b
+}
+
+.badge-success[href]:focus,
+.badge-success[href]:hover {
+  color: color-yiq(#82d616);
+  text-decoration: none;
+  background-color: #609f10
+}
+
+.badge-info {
+  color: #08a1c4;
+  background-color: #abe9f7
+}
+
+.badge-info[href]:focus,
+.badge-info[href]:hover {
+  color: color-yiq(#17c1e8);
+  text-decoration: none;
+  background-color: #1193b0
+}
+
+.badge-warning {
+  color: #fbc400;
+  background-color: #fef5d3
+}
+
+.badge-warning[href]:focus,
+.badge-warning[href]:hover {
+  color: color-yiq(#fbcf33);
+  text-decoration: none;
+  background-color: #ecb905
+}
+
+.badge-danger {
+  color: #bd0000;
+  background-color: #fc9797
+}
+
+.badge-danger[href]:focus,
+.badge-danger[href]:hover {
+  color: color-yiq(#ea0606);
+  text-decoration: none;
+  background-color: #ae0404
+}
+
+.badge-light {
+  color: #c7d3de;
+  background-color: #fff
+}
+
+.badge-light[href]:focus,
+.badge-light[href]:hover {
+  color: color-yiq(#e9ecef);
+  text-decoration: none;
+  background-color: #c6cdd5
+}
+
+.badge-dark {
+  color: #1e2e4a;
+  background-color: #8097bf
+}
+
+.badge-dark[href]:focus,
+.badge-dark[href]:hover {
+  color: color-yiq(#344767);
+  text-decoration: none;
+  background-color: #1f2b3e
+}
+
+.badge-white {
+  color: #e8e3e3;
+  background-color: #fff
+}
+
+.badge-white[href]:focus,
+.badge-white[href]:hover {
+  color: color-yiq(#fff);
+  text-decoration: none;
+  background-color: #e0e0e0
+}
+
+.badge-circle {
+  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  padding: 0 !important;
+  width: 1.25rem;
+  height: 1.25rem;
+  font-size: .75rem;
+  font-weight: 600
+}
+
+.badge-circle.badge-md {
+  width: 1.5rem;
+  height: 1.5rem
+}
+
+.badge-circle.badge-lg {
+  width: 2rem;
+  height: 2rem
+}
+
+.badge-dot {
+  padding-left: 0;
+  padding-right: 0;
+  background: transparent;
+  font-weight: 400;
+  font-size: .875rem;
+  text-transform: none
+}
+
+.badge-dot strong {
+  color: #343a40
+}
+
+.badge-dot i {
+  display: inline-block;
+  vertical-align: middle;
+  width: .375rem;
+  height: .375rem;
+  border-radius: 50%;
+  margin-right: .375rem
+}
+
+.badge-dot.badge-md i {
+  width: .5rem;
+  height: .5rem
+}
+
+.badge-dot.badge-lg i {
+  width: .625rem;
+  height: .625rem
+}
+
+.btn .badge-floating {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 3px solid
+}
+
+.btn .badge-floating.badge:not(.badge-circle) {
+  transform: translate(147%, 50%)
+}
+
 
 .accordion {
   --bs-accordion-color: #67748e;
@@ -23267,7 +23492,8 @@ html {
     padding: 1.5rem;
   }
 
-  .main-content, footer {
+  .main-content,
+  footer {
     margin-left: 17.125rem;
   }
 
@@ -23351,6 +23577,7 @@ html {
 .navbar-vertical .navbar-nav>.nav-item .nav-link.active {
   color: #344767;
   background-color: #fff;
+  margin-top: 0.45rem;
 }
 
 .navbar-vertical .navbar-nav>.nav-item .nav-link.active .icon {

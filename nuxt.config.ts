@@ -10,7 +10,7 @@ export default defineNuxtConfig({
   app: {
     head: {
       meta: [
-        { name: 'viewport', content: 'width=device-width; initial-scale=1; user-scalable=no; maximum-scale=1' }
+        { name: 'viewport', content: 'width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1' }
       ],
       noscript: [
         { children: 'JavaScript is required' }

@@ -9,6 +9,13 @@
             "currentQuantity": "current quantity",
             "wateringPrice": "watering price",
             "wateringQuantity": "watering quantity"
+        },
+        "kospi": {
+            "title": "Kospi Rise Rate Top",
+            "name": "item",
+            "price": "price",
+            "rate": "rate of increase",
+            "volume": "volume"
         }
     },
     "etc": {

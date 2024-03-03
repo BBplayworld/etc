@@ -9,6 +9,13 @@
             "currentQuantity": "현재 수량",
             "wateringPrice": "물타기 평균가",
             "wateringQuantity": "물타기 수량"
+        },
+        "kospi": {
+            "title": "Kospi 상승률 상위",
+            "name": "종목",
+            "price": "현재 가격",
+            "rate": "상승률",
+            "volume": "거래량"
         }
     },
     "etc": {
