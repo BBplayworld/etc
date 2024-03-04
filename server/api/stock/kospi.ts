@@ -10,6 +10,7 @@ export default defineEventHandler(async () => {
   return superjson.stringify({
     kospi,
     kosdaq,
-    date: korea.getDate()
+    date: korea.getDate(),
+    standard: korea.standard
   }) as unknown
 })

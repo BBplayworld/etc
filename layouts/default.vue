@@ -2,14 +2,13 @@
     <div v-if="isMounted" class="g-sidenav-show" :class="[asideStore.show ? 'g-sidenav-pinned' : '']">
         <Nav />
         <Aside />
-        <div class="etc" @click="func.asideToggle">
-            <div>
-                <slot />
-            </div>
+        <div @click="func.asideToggle">
+            <slot />
         </div>
         <Footer />
     </div>
 </template>
+
 <script setup>
 import { useBBetcStore } from '@/stores/bbetc'
 import { useAsideStore } from '@/stores/aside'
