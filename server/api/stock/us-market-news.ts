@@ -17,7 +17,7 @@ export default defineEventHandler(async (event) => {
   try {
     res = await axios({ url, timeout: 4000 })
 
-    if (!res['data']) {
+    if (!res || !res['data']) {
       return { news: {} } as unknown
     }
 
