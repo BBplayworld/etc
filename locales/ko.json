@@ -16,6 +16,9 @@
             "price": "현재 가격",
             "rate": "상승률",
             "volume": "거래량"
+        },
+        "usMarketNews": {
+            "title": "[미국] 마켓 뉴스"
         }
     },
     "etc": {

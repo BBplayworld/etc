@@ -16,6 +16,9 @@
             "price": "price",
             "rate": "rate of increase",
             "volume": "volume"
+        },
+        "usMarketNews": {
+            "title": "[USA] Market News"
         }
     },
     "etc": {

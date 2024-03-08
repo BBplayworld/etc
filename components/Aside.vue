@@ -5,6 +5,9 @@
         <div class="collapse navbar-collapse  w-auto " id="sidenav-collapse-main">
             <ul class="navbar-nav">
                 <li class="nav-item">
+                    <h6 class="ps-3 ms-2 text-lg font-weight-bolder">Stock</h6>
+                </li>
+                <li class="nav-item">
                     <NuxtLink :to="localePath('/stock/watering')" class="nav-link active"
                         @click.native="func.asideSwitch()">
                         <div
@@ -20,6 +23,15 @@
                             class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
                         </div>
                         <span class="nav-link-text ms-1">{{ $t('stock.kospi.title') }}</span>
+                    </NuxtLink>
+                </li>
+                <li class="nav-item">
+                    <NuxtLink :to="localePath('/stock/us-market-news')" class="nav-link active"
+                        @click.native="func.asideSwitch()">
+                        <div
+                            class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
+                        </div>
+                        <span class="nav-link-text ms-1">{{ $t('stock.usMarketNews.title') }}</span>
                     </NuxtLink>
                 </li>
             </ul>
