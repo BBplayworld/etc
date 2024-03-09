@@ -130,8 +130,7 @@
 
 <script setup lang="ts">
 import superjson from 'superjson'
-
-const { pending, data: stocks } = await useFetch('/api/stock/kospi', {
+const { pending, data: stocks } = useFetch('/api/stock/kospi', {
     transform: (value) => {
         return superjson.parse(value as unknown as string)
     }

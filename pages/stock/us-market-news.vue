@@ -3,33 +3,31 @@
         <div class="container-fluid py-4">
             <div class="row gx-4">
                 <div class="col-12 col-md-12 col-lg-5">
-                    <div class="card">
-                        <div class="card-body">
-                            <span class="btn badge badge-md bg-gradient-warning mt-2 me-2"
-                                @click.prevent="func.badgeTicker('')">
-                                ALL
-                            </span>
-                            <span class="btn badge badge-md bg-gradient-dark mt-2 me-2"
-                                @click.prevent="func.badgeTicker('MSFT')">
-                                MSFT
-                            </span>
-                            <span class="btn badge badge-md bg-gradient-dark mt-2 me-2"
-                                @click.prevent="func.badgeTicker('AAPL')">
-                                AAPL
-                            </span>
-                            <span class="btn badge badge-md bg-gradient-dark mt-2 me-2"
-                                @click.prevent="func.badgeTicker('NVDA')">
-                                NVDA
-                            </span>
-                            <span class="btn badge badge-md bg-gradient-dark mt-2 me-2"
-                                @click.prevent="func.badgeTicker('AMZN')">
-                                AMZN
-                            </span>
-                            <span class="btn badge badge-md bg-gradient-dark mt-2 me-"
-                                @click.prevent="func.badgeTicker('TSLA')">
-                                TSLA
-                            </span>
-                        </div>
+                    <div class="ms-4">
+                        <span class="btn badge badge-md bg-gradient-warning mt-2 me-2"
+                            @click.prevent="func.badgeTicker('')">
+                            ALL
+                        </span>
+                        <span class="btn badge badge-md bg-gradient-dark mt-2 me-2"
+                            @click.prevent="func.badgeTicker('MSFT')">
+                            MSFT
+                        </span>
+                        <span class="btn badge badge-md bg-gradient-dark mt-2 me-2"
+                            @click.prevent="func.badgeTicker('AAPL')">
+                            AAPL
+                        </span>
+                        <span class="btn badge badge-md bg-gradient-dark mt-2 me-2"
+                            @click.prevent="func.badgeTicker('NVDA')">
+                            NVDA
+                        </span>
+                        <span class="btn badge badge-md bg-gradient-dark mt-2 me-2"
+                            @click.prevent="func.badgeTicker('AMZN')">
+                            AMZN
+                        </span>
+                        <span class="btn badge badge-md bg-gradient-dark mt-2 me-"
+                            @click.prevent="func.badgeTicker('TSLA')">
+                            TSLA
+                        </span>
                     </div>
                 </div>
             </div>
@@ -53,10 +51,10 @@
                                     </span>
                                     <div class="timeline-content">
                                         <h6 class="text-dark text-lg font-weight-bold mb-0">[{{ feed.source ||
-                                    'None' }}]
+                                'None' }}]
                                             &nbsp;{{ feed.title }}</h6>
                                         <p class="text-secondary font-weight-bold text-xs mt-1 mb-0">{{
-                                    moment(feed.time_published).format('YYYY.MM.DD HH:mm') }}</p>
+                                moment(feed.time_published).format('YYYY.MM.DD HH:mm') }}</p>
 
                                         <br />
 
@@ -70,7 +68,7 @@
                                         </button>
                                     </div>
                                 </div>
-                                <br /><br /><br />
+                                <br /><br />
                             </div>
                         </div>
                     </div>
