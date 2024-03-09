@@ -5,7 +5,7 @@ interface newsType {
 }
 const news: newsType = {}
 
-export const useMarketNewsStore = defineStore("usMarketNews", {
+export const useMarketNewsStore = defineStore("marketNewsStore", {
     state: () => ({
         news
     }),

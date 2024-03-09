@@ -5,15 +5,6 @@
                 <div class="col-12 col-md-12 col-lg-5">
                     <div class="card">
                         <div class="card-body">
-                            <div class="d-flex">
-                                <div class="input-group">
-                                    <input type="text" class="form-control" placeholder="Ticker" v-model="ticker"
-                                        @focus="searchFocused = true" @blur="searchFocused = false">
-                                </div>
-                                <button class="btn bg-gradient-primary mb-0 ms-2" @click.prevent="func.fetchRefresh">
-                                    Search
-                                </button>
-                            </div>
                             <span class="btn badge badge-md bg-gradient-warning mt-2 me-2"
                                 @click.prevent="func.badgeTicker('')">
                                 ALL
@@ -62,10 +53,10 @@
                                     </span>
                                     <div class="timeline-content">
                                         <h6 class="text-dark text-lg font-weight-bold mb-0">[{{ feed.source ||
-                                        'None' }}]
+                                    'None' }}]
                                             &nbsp;{{ feed.title }}</h6>
                                         <p class="text-secondary font-weight-bold text-xs mt-1 mb-0">{{
-                                        moment(feed.time_published).format('YYYY.MM.DD HH:mm') }}</p>
+                                    moment(feed.time_published).format('YYYY.MM.DD HH:mm') }}</p>
 
                                         <br />
 
@@ -92,16 +83,24 @@
 <script setup lang="ts">
 import axios from 'axios'
 import moment from 'moment'
+import { useMarketNewsStore } from '@/stores/stock/usMarketNews'
+const marketNewsStore = useMarketNewsStore()
 
-const searchFocused = defineModel('searchFocused', { default: false })
 const pending = defineModel('pending', { default: true })
-const feeds = defineModel('feeds', { default: {} })
+const feeds = defineModel('feeds', { default: [] })
 const ticker = ref('')
+const cacheKey = ref('all')
 const func = {
     open(url: string) {
         window.open(url)
     },
     async getNews() {
+        if (marketNewsStore.news[cacheKey.value]) {
+            pending.value = false
+            feeds.value = toRaw(marketNewsStore.news[cacheKey.value]) as any
+            return
+        }
+
         let res = await axios({
             url: `/api/stock/us-market-news`,
             params: {
@@ -111,6 +110,18 @@ const func = {
         })
         pending.value = false
         feeds.value = res['data']['news']
+        func.cacheNews(res['data']['news'])
+    },
+    setCacheKey() {
+        if (ticker.value === '') {
+            cacheKey.value = 'all'
+        } else {
+            cacheKey.value = ticker.value
+        }
+    },
+    cacheNews(news: any) {
+        this.setCacheKey()
+        marketNewsStore.cacheNews(cacheKey.value, news)
     },
     fetchRefresh() {
         pending.value = true
@@ -118,8 +129,10 @@ const func = {
     },
     badgeTicker(selectTicker: string) {
         ticker.value = selectTicker
+        this.setCacheKey()
         this.fetchRefresh()
-    }
+    },
+
 }
 
 onMounted(func.getNews)
