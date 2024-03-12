@@ -7,7 +7,7 @@ export default defineEventHandler(async (event) => {
   const url = `https://www.alphavantage.co/query?function=NEWS_SENTIMENT&tickers=${ticker}&apikey=JX88ACQXMG5745YH`
   let res = {} as any
   try {
-    res = await axios({ url, timeout: 4000 })
+    res = await axios({ url, timeout: 5000 })
 
     if (!res || !res['data']) {
       return { news: {} } as unknown

@@ -32,7 +32,9 @@
                 </div>
             </div>
             <div v-if="pending" class="row gx-4">
-                <h2>Loading...</h2>
+                <div class="col-12 col-lg-8 mt-3 ms-4">
+                    <h2>Loading...</h2>
+                </div>
             </div>
             <div v-else class="row gx-4">
                 <div class="col-12 col-lg-8">
@@ -104,7 +106,7 @@ const func = {
             params: {
                 ticker: ticker.value
             },
-            timeout: 4000
+            timeout: 5000
         })
         pending.value = false
         feeds.value = res['data']['news']

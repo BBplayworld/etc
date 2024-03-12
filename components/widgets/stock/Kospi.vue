@@ -1,6 +1,8 @@
 <template>
     <div v-if="pending" class="row my-4">
-        <h2>Loading...</h2>
+        <div class="col-12 col-lg-12">
+            <h2>Loading...</h2>
+        </div>
     </div>
     <div v-else class="row my-4">
         <div class="col-12 col-lg-12">
@@ -11,7 +13,7 @@
                             <i class="bg-info"></i>
                             <span class="text-dark text-sm">{{ stocks.date }}</span>
                         </span>
-                        <span class="text-dark text-sm">▲<b>{{ stocks.standard.diffPercent }}</b>% {{
+                        &nbsp;<span class="text-dark text-sm">▲<b>{{ stocks.standard.diffPercent }}</b>% {{
         $t('stock.kospi.rate') }}, ▲<b>{{
         stocks.standard.volume.toLocaleString() }}</b> {{
         $t('stock.kospi.volume') }}</span>
@@ -72,7 +74,7 @@
                             <i class="bg-info"></i>
                             <span class="text-dark text-sm">{{ stocks.date }}</span>
                         </span>
-                        <span class="text-dark text-sm">▲<b>{{ stocks.standard.diffPercent }}</b>% {{
+                        &nbsp;<span class="text-dark text-sm">▲<b>{{ stocks.standard.diffPercent }}</b>% {{
         $t('stock.kospi.rate') }}, ▲<b>{{
         stocks.standard.volume.toLocaleString() }}</b> {{
         $t('stock.kospi.volume') }}</span>
@@ -88,7 +90,7 @@
                                     {{ $t('stock.kospi.price') }}</th>
                                 <th class="text-center text-uppercase text-sm font-weight-bolder ps-2">
                                     {{
-        $t('stock.kospi.rate') }}
+                                    $t('stock.kospi.rate') }}
                                 </th>
                                 <th class="text-center text-uppercase text-sm font-weight-bolder">
                                     {{ $t('stock.kospi.volume') }}</th>
