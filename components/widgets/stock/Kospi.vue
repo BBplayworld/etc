@@ -4,7 +4,7 @@
             <h2>Loading...</h2>
         </div>
     </div>
-    <div v-else class="row my-4">
+    <div v-else class="row my-3">
         <div class="col-12 col-lg-12">
             <div class="card">
                 <div class="card-header pb-0">
@@ -132,7 +132,7 @@
 
 <script setup lang="ts">
 import superjson from 'superjson'
-const { pending, data: stocks } = useFetch('/api/stock/kospi', {
+const { pending, data: stocks } = useLazyFetch('/api/stock/kospi', {
     transform: (value) => {
         return superjson.parse(value as unknown as string)
     }

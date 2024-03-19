@@ -132,7 +132,6 @@ const func = {
         this.setCacheKey()
         this.fetchRefresh()
     },
-
 }
 
 onMounted(func.getNews)

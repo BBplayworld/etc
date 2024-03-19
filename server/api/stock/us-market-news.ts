@@ -14,7 +14,6 @@ export default defineEventHandler(async (event) => {
     }
 
     if (res['data']['Information']) {
-      console.log('[Res-info]', res['data']['Information'])
       return { news: {} } as unknown
     }
 

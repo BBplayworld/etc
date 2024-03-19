@@ -10,9 +10,9 @@
 </template>
 
 <script setup>
-import { useBBetcStore } from '@/stores/bbetc'
+import { useSiteStore } from '@/stores/site'
 import { useAsideStore } from '@/stores/aside'
-const bbetcStore = useBBetcStore()
+const siteStore = useSiteStore()
 const asideStore = useAsideStore()
 const isMounted = ref(false)
 const route = useRoute()
@@ -22,12 +22,12 @@ onMounted(() => {
 })
 
 useSeoMeta({
-    title: bbetcStore.domain,
-    description: bbetcStore.seo['description'][route.path] || bbetcStore.seo['description']['/'],
-    ogTitle: bbetcStore.domain,
+    title: siteStore.domain,
+    description: siteStore.seo['description'][route.path] || siteStore.seo['description']['/'],
+    ogTitle: siteStore.domain,
     ogType: 'website',
-    ogSiteName: bbetcStore.company,
-    ogDescription: bbetcStore.seo['description'][route.path] || bbetcStore.seo['description']['/'],
+    ogSiteName: siteStore.company,
+    ogDescription: siteStore.seo['description'][route.path] || siteStore.seo['description']['/'],
     ogImage: ''
 })
 
@@ -38,4 +38,4 @@ const func = {
         }
     }
 }
-</script>
+</script>~/stores/site
